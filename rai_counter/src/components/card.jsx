@@ -21,7 +21,10 @@ class Card extends Component
             return "card text-white bg-danger mb-3";
         }
     };*/
-    increment(){
+
+
+    increment()
+    {
         //console.log("clicked");
         //this.setState({count : this.state.count+1});
         this.setState(prevState => {
@@ -31,15 +34,15 @@ class Card extends Component
         });
     }
 
+    //style={{maxWidth : '18rem',}}
+
     render()
     {
-        //console.log('fun',this.stat);
-        //console.log('output',this.props.status);
         return(
-            <div className={ this.props.status } style={{maxWidth : '18rem',}}>
-            <div className="card-header">{this.props.heading}</div>
+            <div className={ this.props.status } >
+            <div className="card-header text-center" >{this.props.heading}</div>
             <div className="card-body">
-            <div className="card-text">{ this.state.count }</div>
+            <div className="card-text text-center font-weight-bold" style={{fontSize : 70}}>{ this.state.count }</div>
             </div>
             <button type="button" className="btn btn-secondary btn-sm" onClick={this.increment}>Count</button>
           </div>
