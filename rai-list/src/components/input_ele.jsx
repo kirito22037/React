@@ -1,5 +1,5 @@
 import React from 'react';
-import ListDis from './list_dis';
+//import ListDis from './list_dis';
 
 class InputEle extends React.Component
 {
@@ -13,23 +13,6 @@ class InputEle extends React.Component
         }
     };
 
-    handleEnter = (event) => {
-        if(event.key === 'Enter')
-        {
-            console.log("enter pressed");
-            
-            let task=event.target.value;                  //if taken inside the function throws error
-            this.setState((prevState,eventx) => {
-                //let task = eventx.target.value;   
-                console.log("value : ",task)
-                let listobj=prevState.todolist;
-                listobj.push(task);
-                return({todolist : listobj})
-            })
-        }
-    };
-
-
 
     render()
     {
@@ -38,9 +21,9 @@ class InputEle extends React.Component
         return(
         <React.Fragment>
             
-            <input className="form-control" type="text" onKeyDown={this.handleEnter} placeholder="next task"/>
+            <input className="form-control" type="text" onKeyDown={ this.props.updatetodo } placeholder="next task"/>
             
-            <ListDis stateobj={this.state.todolist}/>
+            
             
         </React.Fragment>)
         

@@ -12,11 +12,13 @@ class ListDis extends React.Component
     render()
     {
         console.log("element re-render")
+        console.log("the list is : ",this.props.todolist)
             
         return(<ul style={{listStyle : "none" , padding : '0' }}>
             {
-            this.props.stateobj.map(lis =>{
-                return(<li className="alert alert-secondary">{lis}</li>)
+            this.props.todolist.map(lis =>{
+                if(lis.id!= 0)
+                return(<li key={lis.id} className="alert alert-secondary">{lis.data}</li>)
             })
             }
         </ul>)
