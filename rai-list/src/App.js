@@ -10,6 +10,7 @@ class App extends React.Component
            ]
         };
       
+  
 
   handleEnter = (event) => {
     if(event.key === 'Enter')
@@ -44,13 +45,50 @@ class App extends React.Component
     }
   };
 
+  handleclick = (id) => {
+    console.log("list content is clicked");
+      console.log("id of clicked element",id);
+      this.setState(prevState => {
+        let updatedlist = prevState.todolist.map(element =>{
+          if(element.id == id)
+          {
+            element.status = !element.status;
+          }
+          return element;
+        });
+        return(
+          {
+            todolist : updatedlist
+          });
+      }
+      )
+  };
+
+  handlecross = (ele) => {
+    console.log("cross is clicked");
+    console.log("id to be deleted",ele.id);
+    console.log("element",ele);
+    let oldlist=[...this.state.todolist];
+    console.log("old list",oldlist);
+    let index = oldlist.indexOf(ele);
+    console.log("index",index);
+
+    let dummylist=[...oldlist];
+    let deletedelement=dummylist.splice(index,1);
+    console.log("updatedlist : ",dummylist);
+    
+    this.setState({
+      todolist : dummylist
+    })
+  };
+
   render()
   {
     
     return (
       <div >
                <InputEle updatetodo={ this.handleEnter }/>
-               <ListDis todolist={ this.state.todolist }/>           
+               <ListDis todolist={ this.state.todolist } handleclick={ this.handleclick } handlecross={ this.handlecross }/>           
       </div>
     )
   };
