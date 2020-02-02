@@ -10,7 +10,8 @@ class MainBody extends React.Component{
                 uppertext : "",
                 lowertext : "",
                 randomimage : "http://i.imgflip.com/1bij.jpg",
-                dataset : []
+                dataset : [],
+                fl : true
             };
         }
         this.handlesubmit=this.handlesubmit.bind(this);
@@ -28,6 +29,11 @@ class MainBody extends React.Component{
             })
             .catch( err =>{
                 console.log("cant load from api ",err.message);
+                this.setState(prevState =>{ 
+                    return({
+                        fl : !prevState.fl
+                    })
+                })
             })
     }
 
@@ -47,10 +53,18 @@ class MainBody extends React.Component{
     {
         //event.preventDefault()
         console.log("submit clicked");
+        console.log("flag : ",this.state.fl);
+        if(this.state.fl === true)
+        {
+            const randNum = Math.floor(Math.random() * this.state.dataset.length)
+            const randMemeImg = this.state.dataset[randNum].url
+            this.setState({ randomimage: randMemeImg })
+        }
+        else
+        {
+            console.log("the dataset of meme is empty !!");
+        }
         
-        const randNum = Math.floor(Math.random() * this.state.dataset.length)
-        const randMemeImg = this.state.dataset[randNum].url
-        this.setState({ randomimage: randMemeImg })
     }
 
     
@@ -87,7 +101,8 @@ class MainBody extends React.Component{
                     <div className = "memesection">
                         <h2>{ this.state.uppertext }</h2>
                         <h2>{ this.state.lowertext }</h2>
-                        <img src={this.state.randomimage} alt="can't load try using vpn"/>
+                        {this.state.fl ? <img src={this.state.randomimage} alt="can't load try using vpn"/> : <h1>can,t fetch data!!</h1>}
+                        
                     </div>
                     
             </React.Fragment>
