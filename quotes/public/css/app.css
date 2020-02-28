@@ -1,0 +1,13 @@
+body{
+   height : 100vh;
+}
+
+#root{
+    display: block;
+    width: 100%;
+    transform: translate(0%,-20%);
+}
+
+.back_color{
+   background-color: brown;
+}
