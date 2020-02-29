@@ -11,7 +11,7 @@ class Heading extends React.Component
     {
         return(
             <React.Fragment>
-                <h1 style={this.styleFont} className="mt-3 mb-3 d-flex justify-content-center">
+                <h1 style={this.styleFont} id="heading" className="mt-3 mb-3 d-flex justify-content-center">
                     Keep Calm 
                 </h1>
             </React.Fragment>
