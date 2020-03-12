@@ -1,0 +1,23 @@
+.card{
+    box-sizing: border-box;
+    height: 95vh!important;
+    width: 95vw!important;
+}
+
+p{
+    font-size: 7vw;
+}
+
+footer{
+    font-size: 4vh;
+}
+
+.card-body
+{
+    display: flex;
+}
+
+.blockquote{
+    margin : auto;
+    text-align: center;
+}

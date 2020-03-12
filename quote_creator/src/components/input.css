@@ -1,0 +1,11 @@
+.card{
+    height:auto;
+    box-sizing: border-box;
+}
+#quote_cont{
+    height : 60vh;
+}
+
+#auth_cont{
+    height : 10vh;
+}

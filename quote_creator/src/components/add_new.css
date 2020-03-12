@@ -1,0 +1,16 @@
+.addbtn{
+    display: inline-block;
+    height: 6vh;
+    width: 6vh;
+    text-align: center;
+    background-color: coral;
+    color: white;
+    border-radius: 6vh;
+    padding: 1.5vh;
+
+    margin: 7px;
+    z-index: 1;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
