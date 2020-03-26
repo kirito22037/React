@@ -1,5 +1,7 @@
 import React from 'react';
 import './list_css.css';
+import { connect } from 'react-redux';
+
 class ListDis extends React.Component
 {
     constructor(props)
@@ -26,8 +28,8 @@ class ListDis extends React.Component
 
     render()
     {
-        console.log("element re-render")
-        console.log("the list is : ",this.props.todolist)
+        console.log("element list_display re-render");
+        console.log("the props is : ",this.props);
             
         return(<ul style={{listStyle : "none" , padding : '0' }}>
                 {
@@ -67,4 +69,20 @@ class ListDis extends React.Component
     }
 };
 
-export default ListDis;
+const mapStateToProps = (state ,ownProp)=>{
+    return{
+        todolist : state.todolist
+}};
+
+const mapDispatchToProps = (dispatch)=>{
+    return{
+        handleclick : (id)=>{
+            dispatch({type:"DONE_TODO" , id : id})
+        },
+        handlecross : (lis)=>{
+            dispatch({type:"DELETE_TODO" , lis : lis})
+        }
+    }
+}
+
+export default connect(mapStateToProps , mapDispatchToProps)(ListDis);
