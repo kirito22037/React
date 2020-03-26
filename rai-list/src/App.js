@@ -41,7 +41,8 @@ class App extends React.Component
             
             listobj.push(newelement);
             return({todolist : listobj})
-        })
+        });
+        event.target.value = " ";
     }
   };
 
@@ -88,7 +89,10 @@ class App extends React.Component
     return (
       <div >
                <InputEle updatetodo={ this.handleEnter }/>
-               <ListDis todolist={ this.state.todolist } handleclick={ this.handleclick } handlecross={ this.handlecross }/>           
+               <ListDis 
+               todolist={ this.state.todolist } 
+               handleclick={ this.handleclick } 
+               handlecross={ this.handlecross }/>           
       </div>
     )
   };

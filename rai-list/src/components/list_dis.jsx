@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './list_css.css';
 class ListDis extends React.Component
 {
     constructor(props)
@@ -10,7 +10,7 @@ class ListDis extends React.Component
 
     
     hoverEffect1(e) {
-        e.target.style.background = 'black';
+        e.target.style.background = "rgba(0,0,0,0.4)";
         e.target.style.color = 'white'
       }
     hoverEffect2(e) {
@@ -34,20 +34,21 @@ class ListDis extends React.Component
                     this.props.todolist.map(lis => {
                                                      if(lis.id!== 0)
                                                      {
-                                                        return(<React.Fragment>
-                                                                    <li key={lis.id}> 
+                                                        return(<React.Fragment key={lis.id+'kk'}>
+                                                                    <li className="lisDiv" key={lis.id}> 
                                                                             <div
                                                                             key={lis.id+'a'} 
                                                                             onMouseEnter={ this.hoverEffect1 } 
                                                                             onMouseLeave={ this.hoverEffect2 } 
                                                                             onClick={ () => this.props.handleclick(lis.id) } 
                                                                             style={ lis.status === true ? this.completedstyle : null }
-                                                                            className="alert alert-secondary">
-                                                                                {lis.data}  
+                                                                            className="alert alert-secondary lisCss">
+                                                                                <p>{lis.data}</p>  
                                                                             </div>
 
                                                                             <button 
-                                                                            className="btn btn-secondary"
+                                                                            key={lis.id+'b'}
+                                                                            className="btn btn-secondary btnCss"
                                                                             key={lis.id+'b'}
                                                                             onClick={ () => this.props.handlecross(lis) }>
                                                                             {"\u00D7"}

@@ -1,4 +1,5 @@
 import React from 'react';
+import './input_css.css';
 //import ListDis from './list_dis';
 
 class InputEle extends React.Component
@@ -21,7 +22,10 @@ class InputEle extends React.Component
         return(
         <React.Fragment>
             
-            <input className="form-control" type="text" onKeyDown={ this.props.updatetodo } placeholder="next task"/>
+            <input className="form-control cssInp" 
+            type="text" 
+            onKeyDown={ this.props.updatetodo } 
+            placeholder="next task"/>
             
             
             
