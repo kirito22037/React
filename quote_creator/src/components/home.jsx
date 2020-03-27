@@ -9,7 +9,7 @@ class Home extends React.Component{
     {
         return(
             <div className='home p-3'>
-            <Carousel quotes={ this.props.quotes }/>
+            <Carousel />
             <AddNew/>
         </div>
         )

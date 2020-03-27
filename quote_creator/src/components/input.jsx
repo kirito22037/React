@@ -1,6 +1,7 @@
 import React from 'react';
 import './input.css';
 //import { Link , Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 class Create extends React.Component
 {
@@ -19,8 +20,8 @@ class Create extends React.Component
         let y = document.getElementById("auth_cont").value;
         console.log("text : ",x);
         console.log("auth : ",y);
-        this.props.handleSubmit(x,y);
-        
+        //this.props.handleSubmit(x,y);
+        this.props.newQuote({quote: x, author: y});
         //<Redirect exact to="/" />
         console.log("redirecting to the home page");
         this.props.history.push('/');
@@ -43,7 +44,8 @@ class Create extends React.Component
                     id="quote_cont"
                     name = "quote" 
                     rows="3"
-                    placeholder="write your beautiful quote"/>
+                    placeholder="write your beautiful quote"
+                    required/>
 
                     <label >Author :</label>
                     <textarea 
@@ -51,7 +53,8 @@ class Create extends React.Component
                     id="auth_cont"
                     name= "auth" 
                     rows="3"
-                    placeholder="author's name"/>
+                    placeholder="author's name"
+                    required/>
                     </div>
                     
                     <button type="submit" 
@@ -65,4 +68,11 @@ class Create extends React.Component
     }    
 };
 
-export default Create;
+const mapDispatchToProps = (dispatch)=>{
+    return{
+        newQuote : (quote)=>{
+            dispatch({type : "NEW_QUOTES" , quote:quote});
+        }    
+}};
+
+export default connect(null , mapDispatchToProps)(Create);

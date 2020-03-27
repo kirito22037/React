@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from './card';
+import { connect } from 'react-redux';
 
 class Carousel extends React.Component{
     constructor(props)
@@ -9,6 +10,8 @@ class Carousel extends React.Component{
 
     render()
     {
+        console.log("props of carosole : ",this.props);
+        
         function generateColor()
         {
             var hue = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
@@ -72,4 +75,11 @@ class Carousel extends React.Component{
     }
 };
 
-export default Carousel;
+const mapStateToProps=(state)=>{
+    return{
+        quotes : state.quotes
+    }
+};
+
+
+export default connect(mapStateToProps)(Carousel);
