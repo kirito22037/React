@@ -1,3 +1,11 @@
+# CONTEXT , HOOKS , API BASED React app
+
+# How to Run 
+
+1. create an .env file 
+
+2. REACT_APP_MM_KEY="----your musixmatch api key here-------"
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
