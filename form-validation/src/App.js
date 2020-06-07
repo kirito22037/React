@@ -1,5 +1,6 @@
 import React from 'react';
-import Form from './components/form';
+//import Form from './components/form';
+import FormYup from './components/formYup';
 
 function App() {
   return (
@@ -7,7 +8,7 @@ function App() {
       <h1 className="mt-4">Form Validation </h1>
       <small>power by Formik</small>
 
-      <Form/>
+      <FormYup/>
     </div>
   );
 }
