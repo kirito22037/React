@@ -1,3 +1,7 @@
+# REQUISITE
+
+1. create a .env file and add REACT_APP_SECRET_KEY="your api key from unsplash".
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
