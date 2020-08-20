@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/kirito22037/React/tree/master/markdown-editor/static/css/main.52d6fc2a.chunk.css",
+    "main.js": "/kirito22037/React/tree/master/markdown-editor/static/js/main.a9007584.chunk.js",
+    "main.js.map": "/kirito22037/React/tree/master/markdown-editor/static/js/main.a9007584.chunk.js.map",
+    "runtime-main.js": "/kirito22037/React/tree/master/markdown-editor/static/js/runtime-main.b4787a31.js",
+    "runtime-main.js.map": "/kirito22037/React/tree/master/markdown-editor/static/js/runtime-main.b4787a31.js.map",
+    "static/js/2.6a9d259c.chunk.js": "/kirito22037/React/tree/master/markdown-editor/static/js/2.6a9d259c.chunk.js",
+    "static/js/2.6a9d259c.chunk.js.map": "/kirito22037/React/tree/master/markdown-editor/static/js/2.6a9d259c.chunk.js.map",
+    "index.html": "/kirito22037/React/tree/master/markdown-editor/index.html",
+    "precache-manifest.6331ec10f1db509e0fee79e9a018d240.js": "/kirito22037/React/tree/master/markdown-editor/precache-manifest.6331ec10f1db509e0fee79e9a018d240.js",
+    "service-worker.js": "/kirito22037/React/tree/master/markdown-editor/service-worker.js",
+    "static/css/main.52d6fc2a.chunk.css.map": "/kirito22037/React/tree/master/markdown-editor/static/css/main.52d6fc2a.chunk.css.map",
+    "static/js/2.6a9d259c.chunk.js.LICENSE.txt": "/kirito22037/React/tree/master/markdown-editor/static/js/2.6a9d259c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b4787a31.js",
+    "static/js/2.6a9d259c.chunk.js",
+    "static/css/main.52d6fc2a.chunk.css",
+    "static/js/main.a9007584.chunk.js"
+  ]
+}
